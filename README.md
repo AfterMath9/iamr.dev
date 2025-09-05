@@ -1,4 +1,3 @@
-
 # 🌐 iamr.dev — Personal Portfolio
 
 <p align="center">
@@ -6,7 +5,7 @@
 </p>
 
 <p align="center">
-  <b> <a href="https://github.com/AfterMath9">Amrou Al-Mfalani</a></b><br>
+  <b>Modern portfolio<a href="https://github.com/AfterMath9"></a></b><br>
   <sub>Built with ❤️ using HTML, CSS & JavaScript</sub>
 </p>
 
@@ -29,7 +28,7 @@
   <i>✨ Live demo with glowing effects, animated background & social integrations ✨</i>
 </p>
 
-👉 **Live Site:** [iamr.dev](iamr.dev)
+👉 **Live Site:** [aftermath9.github.io/iamr.dev](https://aftermath9.github.io/iamr.dev)
 
 ---
 
@@ -56,22 +55,40 @@
 
 ## 🚀 Getting Started
 
-### 1. Clone the repo
+### 1️⃣ Clone the repository
 ```bash
 git clone https://github.com/AfterMath9/iamr.dev
 cd iamr.dev
 
-2. Run locally
+2️⃣ Open locally in browser
 
-Just open index.html in your browser
-or use Live Server in VS Code:
+open index.html   # Mac
+xdg-open index.html   # Linux
+start index.html  # Windows
 
+3️⃣ Run with Live Server (optional, hot reload)
+
+# If you don’t have live-server installed globally:
+npm install -g live-server
+
+# Start server in the project folder
 live-server
 
-3. Deploy to GitHub Pages
-	•	Push changes to main branch
-	•	Go to Repo → Settings → Pages
-	•	Set branch to main, folder to / (root)
+4️⃣ Deploy to GitHub Pages
+
+# Make sure you are on main branch
+git checkout main
+
+# Add and commit changes
+git add -A
+git commit -m "Update website"
+
+# Push to GitHub
+git push origin main
+
+Then go to GitHub → Settings → Pages and set:
+	•	Branch: main
+	•	Folder: / (root)
 
 Your site will be live at:
 👉 https://aftermath9.github.io/iamr.dev
@@ -79,11 +96,23 @@ Your site will be live at:
 ⸻
 
 🤝 Contributing
-	1.	Fork the repo
-	2.	Create your branch (git checkout -b feature-name)
-	3.	Commit changes (git commit -m "Add feature")
-	4.	Push to branch (git push origin feature-name)
-	5.	Open a Pull Request
+
+# 1. Fork the repo on GitHub
+# 2. Clone your fork
+git clone https://github.com/<your-username>/iamr.dev
+cd iamr.dev
+
+# 3. Create a new branch
+git checkout -b feature-name
+
+# 4. Make changes and commit
+git add -A
+git commit -m "Add new feature"
+
+# 5. Push your branch
+git push origin feature-name
+
+Then open a Pull Request on GitHub.
 
 ⸻
 
@@ -98,3 +127,4 @@ You are free to use, modify, and share — attribution is appreciated!
 <p align="center">
   Developed with ❤️ by <a href="https://github.com/AfterMath9">Aftermath9</a>
 </p>
+```
