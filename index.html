@@ -2,19 +2,26 @@
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>After Math</title>
+  <title>AMROU AL-MFALANI</title>
   <meta name="description" content="Software Engineer" />
-  <meta property="og:title" content="AfterMath" />
+  <meta property="og:title" content="AMROU AL-MFALANI" />
   <meta property="og:description" content="Software Engineer" />
-  <meta property="og:image" content="media/avatar.png" />
-  <meta property="og:url" content="https://abdoat.nexcord.pro" />
+  <meta property="og:image" content="media/avatar.gif" />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="AMROU AL-MFALANI" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AMROU AL-MFALANI" />
+  <meta name="twitter:description" content="Software Engineer" />
+  <meta name="twitter:image" content="media/avatar.gif" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="stylesheet" href="static/assets/css/landing.css">
   <link rel="stylesheet" href="static/assets/css/misc.css">
-  <link rel="icon" type="image/x-icon" href="media/avatar.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <link rel="icon" type="image/x-icon" href="media/avatar.gif">
   </div>
   <audio id="audio" loop>
     <source src="media/audio.mp3" type="audio/mpeg">
@@ -25,6 +32,7 @@
 
 
   <style>
+    html { scroll-behavior: smooth; }
     @font-face {
       font-family: custom-font;
       src: url(https://fonts.cdnfonts.com/s/85546/Satoshi-Medium.woff);
@@ -37,12 +45,11 @@
     body {
       background-size: cover;
       background-position: center center;
-      display: flex;
+      display: block;
       color: #fff;
       background-color: #1F2128;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
+      overflow-y: auto;
+      overflow-x: hidden;
     }
 
     html,
@@ -148,19 +155,14 @@
 
     /* border */
     .border {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      position: relative;
+      margin: 8px auto 24px;
       padding: 39px 27px;
       width: 100%;
-      max-width: 35.9rem;
+      max-width: 800px;
       border-radius: 35px;
       backdrop-filter: blur(7px);
-      background-color: rgb(255, 255, 255, 0.13) !important;
-      box-shadow: 0 0 2.5px #ffffff;
-      backdrop-filter: blur(7px);
-      background-color: rgb(0, 0, 0, 0.13) !important;
+      background-color: rgba(0, 0, 0, 0.13) !important;
       box-shadow: 0 0 2.5px #ffffff;
       background: linear-gradient(45deg,
           rgba(255, 255, 255, 0) 0%,
@@ -168,7 +170,7 @@
           rgba(255, 255, 255, 0.1) 60%,
           rgba(255, 255, 255, 0) 100%);
       background-size: 200% 200%;
-      animation: shine 4s ease-in-out infinite, slide 2s forwards;
+      animation: shine 4s ease-in-out infinite;
     }
 
 
@@ -202,9 +204,9 @@
 
     @media (max-width : 480px) {
       .border {
-        left: 50%;
-        padding: 0px, 0px;
-        width: 80%;
+        margin: 8px auto 16px;
+        padding: 24px 16px;
+        width: 92%;
         max-width: 100%;
         border-radius: 21px;
       }
@@ -479,9 +481,52 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent
     }
+
+    #resume.glass-card {
+  margin-bottom: 16px;   /* smaller gap below Resume */
+}
+#about.glass-card {
+  margin-top: 16px;      /* smaller gap above About Me */
+}
   </style>
 
   <style>
+    /* Glass cards and section layout */
+    section { scroll-margin-top: 120px; }
+.glass-card {
+  padding: 24px;
+  border-radius: 24px;
+  backdrop-filter: blur(7px);
+  background-color: rgba(255,255,255,0.09);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 0 2.5px #ffffff22;
+  margin: 64px auto;         /* center the box */
+  max-width: 800px;          /* keep same width as About/Projects */
+}    .section-title { font-size: 26px; font-weight: 700; margin: 0 0 12px 0; text-shadow: 0 0 10px rgba(255,255,255,0.25); }
+    .content-wrapper { width: 100%; max-width: 980px; margin: 0 auto; padding: 24px 16px 80px; position: relative; z-index: 0; }
+    .projects-grid, .skills-grid, .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    @media (max-width: 980px) { .projects-grid, .skills-grid, .blog-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px) { .projects-grid, .skills-grid, .blog-grid { grid-template-columns: 1fr; } .content-wrapper { margin-top: 12px; padding: 16px 16px 80px; } section { scroll-margin-top: 96px; } }
+    .project-card, .skill-card, .post-card { padding: 16px; border-radius: 16px; backdrop-filter: blur(6px); background-color: rgba(255,255,255,0.07); border: 1px solid rgba(255, 255, 255, 0.12); transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease; }
+    .project-card:hover, .skill-card:hover, .post-card:hover { transform: translateY(-2px); box-shadow: 0 0 12px rgba(255,255,255,0.18); background-color: rgba(255,255,255,0.10); }
+    .project-card img, .post-card img { width: 100%; height: 160px; -o-object-fit: cover; object-fit: cover; border-radius: 12px; margin-bottom: 10px; }
+    .skill-icons { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+    .skill-item { text-align: center; padding: 12px; border-radius: 12px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); transition: transform .15s ease; display:flex; align-items:center; justify-content:center; gap:8px; }
+    .skill-item:hover { transform: scale(1.04); }
+    .links-row a { color: #fff; text-decoration: none; border: 1px solid rgba(255,255,255,0.25); padding: 6px 10px; border-radius: 10px; margin-right: 8px; display: inline-block; transition: transform .15s ease, background-color .2s ease, border-color .2s ease; }
+    .links-row a:hover { transform: translateY(-1px); background-color: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.4); }
+    .top-nav { position: fixed; top: 0px; left: 0; right: 0; width: 100%; max-width: 980px; margin: 0 auto; padding: 8px 16px; z-index: 2; display: flex; align-items: center; justify-content: space-between; }
+    .top-nav .nav-card { display: inline-flex; gap: 8px; align-items: center; }
+    .nav-link { color: #fff; text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 12px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); }
+    .nav-link:hover { background: rgba(255,255,255,0.10); }
+    .theme-toggle { cursor: pointer; padding: 8px 12px; border-radius: 12px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: #fff; }
+    .theme-toggle:hover { background: rgba(255,255,255,0.10); }
+    /* Light theme */
+    body.light { background-color: #f6f7fb; color: #111; }
+    body.light .border { box-shadow: 0 0 2.5px #00000022; background-color: rgba(255,255,255,0.65) !important; }
+    body.light .glass-card, body.light .project-card, body.light .post-card, body.light .skill-item, body.light .nav-link, body.light .theme-toggle { background-color: rgba(255,255,255,0.75); border-color: rgba(0,0,0,0.12); color: #111; }
+    body.light .links-row a { color: #111; border-color: rgba(0,0,0,0.25); }
+    body.light .description, body.light .normal-username, body.light .customglow-username, body.light .glowblue-username { color: #111; filter: none; text-shadow: none; }
     .status {
       color: #f23f43;
       position: absolute;
@@ -697,13 +742,37 @@
     #myLink {
       cursor: pointer;
     }
+
+    .landing {
+      margin-top: 56; /* Add this if not present, or reduce if too much */
+    }
+
+    .border {
+      margin: 0 auto 24px; /* Reduce top margin from 8px if needed */
+      /* ...existing code... */
+    }
+
+    /* If you want the card to be flush with the navbar, use: */
+    .landing {
+      margin-top: -600px; /* space between card and navbar*/
+    }
+
+    /* Optionally, reduce .content-wrapper margin-top for mobile: */
+    @media (max-width: 640px) {
+      .content-wrapper {
+        margin-top: 0px;
+        /* ...existing code... */
+      }
+    }
   </style>
 
   <script>
+    // Theme persistence
+    (function(){ try { var t = localStorage.getItem('theme'); if (t === 'light') { document.documentElement.classList.add('light'); document.body.classList.add('light'); } } catch(e) {} })();
     var rev = "fwd";
 
     function titlebar(val) {
-      var msg = "AfterMath";
+      var msg = "AMROU AL-MFALANI";
       var speed = 100;
       var pos = val;
       var le = msg.length;
@@ -733,6 +802,12 @@
     titlebar(1);
 
   </script>
+  <script>
+    // Ensure background video plays on load (autoplay policies)
+    window.addEventListener('load', function(){
+      try { var v = document.getElementById('vidx'); if (v && v.paused) { v.play().catch(function(){}); } } catch(e) {}
+    });
+  </script>
 
 
 
@@ -748,7 +823,7 @@
   </div>
 
   <div class="videobg">
-    <video id="vidx" loop playsinline draggable="false" autoplay>
+    <video id="vidx" loop playsinline muted draggable="false" autoplay>
       <source src="media/video.mp4" type="video/mp4" id="video-source" />
     </video>
   </div>
@@ -772,7 +847,7 @@
 
         <div class="username-badge">
           <div class="username-container">
-            <h1 class="customglow-username inline-effect">AfterMath</h1>
+            <h1 class="customglow-username inline-effect">AMROU AL-MFALANI</h1>
           </div>
         </div>
 
@@ -852,23 +927,12 @@
             </path>
           </svg>
         </a>
-        <a href="https://snapchat.com/t/t3d2aPmt" target="_blank" rel="noopener noreferrer">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="#ffffff" height="36" width="36" style="filter: drop-shadow(0 0 0.2rem #ffffff);">
-            <path d="M248.5,145.1c-2.5-5.5,5.3-13.8,8.1-18.7c7-12.2,14.5-29.2,15.4-44.7c1.4-24-7.2-45.5-27.5-56.4
-              C236.8,20.8,213,16.8,193.3,21.8c-9.5,2.3-17.3,7.2-24.4,13.3c-6.2,5.3-14.6,15.4-23.4,14.7c-8.6-0.7-17.6-12.1-23.6-16.3
-              c-5.4-3.7-14.2-6.9-21.8-8.8c-16.4-4.3-38.3-4.8-53.2,8.2c-15.3,13.3-11.4,35.1-5.5,52.7c3.4,10.4,8.7,22,14.9,31.8
-              c3.3,5.1,12.1,13.5,9.3,18.9c-3.1,5.9-15.8,7.4-21.8,11.2c-12.1,7.6-25.3,14.4-35.7,25.2C11.1,215,1,232.1,0,252.1
-              c-1.4,27.3,12.5,50.7,36.1,62.8c11.4,5.7,24.1,9.2,36.4,13.6c9.6,3.3,19.7,6.9,29.5,10.5c8.9,3.2,18.1,8.6,25.7,13.9
-              c4.8,3.2,8.1,7.4,8.2,13.8c0.2,9.9-7.1,22.5-12.9,30.3c-4.7,6.3-8.3,12.8-13.3,19c-6.4,8-17.5,10.6-26.2,15.5
-              c-7.9,4.4-14.6,12-20.9,18.6c-6.2,6.5-10.6,14.7-7.6,24.3c1.8,5.4,7.5,10.7,12.3,14.5c7.9,6.6,17.4,10.5,27.4,12.7
-              c18.6,4.1,37.5,1.6,56.3-0.3c7.4-0.7,15.2-2,22.1-5c8-3.5,16.5-5.4,24.8-7.9c8.5-2.6,17-5.6,25.7-7.9c12.2-3.2,25.6-4.6,37.9-4.4
-              c12.5,0.2,25.7,2.5,38.4,3.8c6.6,0.7,13.4,1.2,20,1.4c10.6,0.3,20.6-0.4,31-1.5c9.9-1,19.8-3.1,29.3-6.5c9.1-3.2,17.5-7.9,25.4-13.7
-              c4.8-3.5,10.3-8.3,12.5-14.2c2.5-6.5,2-13.9-1.7-19.9c-4.9-8.1-12.5-14.8-20.5-20.5c-10.2-7.3-21.5-11.8-32.7-16.6
-              c-7.4-3.1-15.4-5.6-22.7-9.1c-6.7-3.2-15.2-7.3-19.1-13.9c-3.5-5.8-4.3-13.2-0.4-19.2c6.6-10,16.8-17.6,26.9-24.3
-              c5.8-3.7,12.1-6.8,18.1-10.3c12.3-7.1,25.1-15.5,35.4-25.8c8.7-8.7,17-18.9,21.8-30.8c4.5-11.2,5.6-23.3,5-35.4
-              c-0.5-10.2-6.6-18.3-13.3-25.3C311.3,159.4,282.1,151.5,248.5,145.1z"></path>
-          </svg>
-        </a>        
+            
+        <a href="https://linkedin.com/amr1sy" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#ffffff" height="36" width="36" style="filter: drop-shadow(0 0 0.2rem #ffffff);">
+    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+  </svg>
+</a>
         <a href="https://steamcommunity.com/id/aftermath9" target="_blank" rel="noopener noreferrer">
           <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="#ffffff" height="36" width="36" style="filter: drop-shadow(0 0 0.2rem #ffffff);">
             <path
@@ -883,7 +947,6 @@
 
 
     <script src="static/userinfo/script.js"></script>
-    <script src="static/assets/js/enter.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
@@ -966,7 +1029,7 @@
 
             const activities = document.createElement('h3');
             activities.id = 'activities22';
-            activities.style = 'color: rgb(255 255 255);display: block;justify-content: left;margin-top: 4.5px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; width: auto;';
+            activities.style = 'color: rgb(255, 255, 255);display: block;justify-content: left;margin-top: 4.5px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; width: auto;';
             let activityType = '';
             if (data.data.activities && data.data.activities.length > 0) {
               let playingActivity = data.data.activities.find(activity => activity.type === 0);
@@ -1159,7 +1222,7 @@
     </script>
 
     <script>
-      let text = `AfterMath on top`;
+      let text = `AMROU AL-MFALANI on top`;
       let formattedText = text.replace(/(\r\n|\n|\r)/g, '<br>');
       console.log(formattedText)
 
@@ -1222,6 +1285,8 @@
         var delta = 200 - Math.random() * 100;
 
         if (this.isDeleting) {
+         
+         
           delta /= 4;
           if (this.txt === '') {
             this.isDeleting = false;
@@ -1340,6 +1405,96 @@
 
     </script>
     <script src="static/assets/js/instantpage.js" type="module"></script>
+  <!-- Top navigation with theme toggle -->
+  <div class="top-nav">
+    <div class="nav-card glass-card" style="margin:0; padding:8px 12px;">
+      <a class="nav-link" href="#resume">Resume</a>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#projects">Projects</a>
+      <a class="nav-link" href="#skills">Skills</a>
+      <!-- <a class="nav-link" href="#contact">Contact</a> -->
+    </div>
+    <button id="themeToggle" class="theme-toggle">🌗</button>
+  </div>
+
+<section id="resume" class="glass-card">
+  <h2 class="section-title">Resume</h2>
+  <p style="margin:0 0 12px 0;">Download a PDF version of my CV.</p>
+  <div class="links-row">
+    <a href="media/Amrou CV.pdf" download>Download CV</a>
+  </div>
+</section>
+
+
+  <!-- Content sections -->
+  <main class="content-wrapper" style="z-index:1;">
+    <section id="about" class="glass-card">
+      <h2 class="section-title">About Me</h2>
+      <p style="margin:0; font-size:16px; line-height:1.6;">II’m a second-year Software Engineering student at Jönköping University, passionate about creating fast, seamless experiences for both mobile and web. My interests span AI, automation, and developer tools, with a strong focus on building apps, bots, and high-quality user experiences.</p>
+    </section>
+
+    <section id="projects" class="glass-card">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="media/ArbetsTid/ArbetsTid.png" alt="Project screenshot">
+          <h3 style="margin:6px 0 8px 0;">ArbetsTid — iOS Time Tracker</h3>
+          <p style="margin:0 0 10px 0; opacity:.9;">Track shifts, export reports, and insights for hourly work.</p>
+          <div class="links-row">
+            <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+           
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="media/assets/DoTask.png" alt="Project screenshot">
+          <h3 style="margin:6px 0 8px 0;">DoTask</h3>
+          <p style="margin:0 0 10px 0; opacity:.9;">React/TypeScript task app with Supabase backend for team collaboration, task organization, and analytics.</p>
+          <div class="links-row">
+            <a href="hhttps://github.com/AfterMath9/DoTask" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://do-task-green.vercel.app/" target="_blank" rel="noopener noreferrer">Website</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="media/assets/Glassy-Portfolio.png" alt="Project screenshot">
+          <h3 style="margin:6px 0 8px 0;">Glassy Portfolio</h3>
+          <p style="margin:0 0 10px 0; opacity:.9;">Interactive, glassy UI with live Discord/Spotify presence.</p>
+          <div class="links-row">
+            <a href="https://github.com/aftermath9/iamr.dev" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://iamr.dev" target="_blank" rel="noopener">Website</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="glass-card">
+      <h2 class="section-title">Skills • Tech Stack</h2>
+      <div class="skill-icons">
+        <div class="skill-item"><i class="devicon-cplusplus-plain"></i> C++</div>
+        <div class="skill-item"><i class="devicon-swift-plain"></i> Swift</div>
+        <div class="skill-item"><i class="devicon-objectivec-plain"></i> Supabase</div>
+        <div class="skill-item"><i class="devicon-java-plain"></i> Java</div>
+        <div class="skill-item"><i class="devicon-firebase-plain"></i> Firebase</div>
+      </div>
+    </section>
+
+    
+
+    <!-- <section id="contact" class="glass-card">
+      <h2 class="section-title">Contact</h2>
+      <form action="https://formspree.io/f/mjkevnrv" method="POST">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+          <input type="email" name="email" placeholder="Your email" required style="padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.06); color:inherit;" />
+          <input type="text" name="subject" placeholder="Subject" required style="padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.06); color:inherit;" />
+        </div>
+        <textarea name="message" placeholder="Message" rows="5" required style="margin-top:12px; width:100%; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.06); color:inherit;"></textarea>
+        <button type="submit" class="theme-toggle" style="margin-top:10px;">Send</button>
+      </form>
+    </section> -->
+
+   
+  <script>
+    (function(){ var b=document.getElementById('themeToggle'); if(!b) return; b.addEventListener('click', function(){ document.documentElement.classList.toggle('light'); document.body.classList.toggle('light'); try{ localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark'); }catch(e){} }); })();
+  </script>
 </body>
 
 </html>
