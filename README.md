@@ -1,66 +1,100 @@
-# AfterMath Portfolio
 
-This is the source code for [AfterMath](iamr.dev), a personal portfolio website for showcasing projects, skills, and contact information.
+# 🌐 iamr.dev — Personal Portfolio
 
-## Features
+<p align="center">
+  <img src="media/avatar.gif" width="120" style="border-radius:50%">
+</p>
 
-- Glassmorphism UI with animated effects
-- Live Discord status and Spotify presence
-- Social media links (Discord, Telegram, GitHub, Twitter, TikTok, Steam)
-- Projects grid and tech stack display
-- Downloadable CV
-- Contact form (powered by Formspree)
-- Blog/notes section
-- Theme toggle (light/dark)
-- Particle and cursor effects
+<p align="center">
+  <b>Modern animated portfolio website for <a href="https://github.com/AfterMath9">Amrou Al-Mfalani</a></b><br>
+  <sub>Built with ❤️ using HTML, CSS & JavaScript</sub>
+</p>
 
-## Structure
-
-```
-404.html
-index.html
-media/
-  AfterMath.gif
-  Amrou CV.pdf
-  avatar.png
-  Pixelated.png
-  video.mp4
-  ArbetsTid/
-  assets/
-    Glassy-Portfolio.png
-static/
-  assets/
-    css/
-      landing.css
-      misc.css
-    js/
-      enter.js
-      instantpage.js
-  userinfo/
-    script.js
-    effects/
-      sparkle.gif
-```
-
-## Usage
-
-1. Clone or download the repository.
-2. Open `index.html` in your browser to view the site locally.
-3. To deploy, upload all files to your web server or GitHub Pages.
-
-## Customization
-
-- Update your profile info, projects, and skills in `index.html`.
-- Replace images in the `media/` folder as needed.
-- Edit styles in `static/assets/css/landing.css` and `static/assets/css/misc.css`.
-- Update Discord/Spotify integration in the JavaScript section of `index.html`.
-
-## License
-
-This project is provided for personal use. Please contact the author for reuse or redistribution.
+<p align="center">
+  <a href="https://github.com/AfterMath9/iamr.dev/stargazers"><img src="https://img.shields.io/github/stars/AfterMath9/iamr.dev?style=flat-square&color=ffcc00" alt="Stars"></a>
+  <a href="https://github.com/AfterMath9/iamr.dev/network/members"><img src="https://img.shields.io/github/forks/AfterMath9/iamr.dev?style=flat-square&color=00bfff" alt="Forks"></a>
+  <a href="https://github.com/AfterMath9/iamr.dev/issues"><img src="https://img.shields.io/github/issues/AfterMath9/iamr.dev?style=flat-square&color=ff6347" alt="Issues"></a>
+  <a href="https://github.com/AfterMath9/iamr.dev/blob/main/LICENSE"><img src="https://img.shields.io/github/license/AfterMath9/iamr.dev?style=flat-square&color=32cd32" alt="License"></a>
+</p>
 
 ---
 
-**Author:** AfterMath  
-**Location:** Jönköping, Sweden  
-**Contact:** See the contact form on
+## 📸 Preview
+
+<p align="center">
+  <img src="media/Glassy-Portfolio.png" alt="Website Preview" width="800">
+</p>
+
+<p align="center">
+  <i>✨ Live demo with glowing effects, animated background & social integrations ✨</i>
+</p>
+
+👉 **Live Site:** [aftermath9.github.io/iamr.dev](https://aftermath9.github.io/iamr.dev)
+
+---
+
+## ✨ Features
+- 🎨 Glassmorphism UI with glowing & animated effects  
+- 🎥 Background video + particle effects  
+- 🎵 Live **Spotify** & **Discord** status integration  
+- 📱 Responsive design (desktop + mobile)  
+- 🔗 Direct links to GitHub, LinkedIn, Twitter, Telegram, TikTok, Steam, and more  
+
+---
+
+## 📂 Project Structure
+
+.
+├── index.html              # Main landing page
+├── style.css               # Global styles
+├── static/assets/css/      # Component styles
+├── static/userinfo/        # JS for integrations/effects
+├── media/                  # Avatars, video, audio
+└── README.md               # Project documentation
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repo
+```bash
+git clone https://github.com/AfterMath9/iamr.dev
+cd iamr.dev
+
+2. Run locally
+
+Just open index.html in your browser
+or use Live Server in VS Code:
+
+live-server
+
+3. Deploy to GitHub Pages
+	•	Push changes to main branch
+	•	Go to Repo → Settings → Pages
+	•	Set branch to main, folder to / (root)
+
+Your site will be live at:
+👉 https://aftermath9.github.io/iamr.dev
+
+⸻
+
+🤝 Contributing
+	1.	Fork the repo
+	2.	Create your branch (git checkout -b feature-name)
+	3.	Commit changes (git commit -m "Add feature")
+	4.	Push to branch (git push origin feature-name)
+	5.	Open a Pull Request
+
+⸻
+
+📜 License
+
+This project is released under the MIT License.
+You are free to use, modify, and share — attribution is appreciated!
+
+⸻
+
+
+<p align="center">
+  Developed with ❤️ by <a href="https://github.com/AfterMath9">Aftermath9</a>
+</p>
