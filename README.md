@@ -27,7 +27,7 @@
 <p align="center">
   <i>✨ Live demo with glowing effects, animated background & social integrations ✨</i>
 </p>
-```
+
 👉 **Live Site:** [iamr.dev](iamr.dev)
 
 ---
@@ -123,7 +123,8 @@ You are free to use, modify, and share — attribution is appreciated!
 
 ⸻
 
-
+```
 <p align="center">
   Developed with ❤️ by <a href="https://github.com/AfterMath9">Aftermath9</a>
 </p>
+```
