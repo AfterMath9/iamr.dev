@@ -28,8 +28,7 @@
   <i>✨ Live demo with glowing effects, animated background & social integrations ✨</i>
 </p>
 
-👉 **Live Site:** [iamr.dev](iamr.dev)
-
+👉 **Live Site:** <a href="https://iamr.dev" target="_blank">iamr.dev</a>
 ---
 
 ## ✨ Features
