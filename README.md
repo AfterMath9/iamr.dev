@@ -22,7 +22,7 @@
 ## 📸 Preview
 
 <p align="center">
-  <img src="media/Glassy-Portfolio.png" alt="Website Preview" width="800">
+  <img src="media/assets/Glassy-Portfolio.png" alt="Website Preview" width="800">
 </p>
 
 <p align="center">
