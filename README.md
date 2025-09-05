@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <b>Modern animated portfolio website for <a href="https://github.com/AfterMath9">Amrou Al-Mfalani</a></b><br>
+  <b> <a href="https://github.com/AfterMath9">Amrou Al-Mfalani</a></b><br>
   <sub>Built with ❤️ using HTML, CSS & JavaScript</sub>
 </p>
 
@@ -29,7 +29,7 @@
   <i>✨ Live demo with glowing effects, animated background & social integrations ✨</i>
 </p>
 
-👉 **Live Site:** [aftermath9.github.io/iamr.dev](https://aftermath9.github.io/iamr.dev)
+👉 **Live Site:** [iamr.dev](iamr.dev)
 
 ---
 
