@@ -739,6 +739,20 @@
         flex: 0 0 auto;
       }
     }
+
+    .page-footer {
+      margin: 48px auto 24px;
+      max-width: 800px;
+      padding: 0 16px 32px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 14px;
+      letter-spacing: 0.02em;
+    }
+
+    body.light .page-footer {
+      color: rgba(0, 0, 0, 0.6);
+    }
     /* Light theme */
     body.light { background-color: #f6f7fb; color: #111; }
     body.light .border { box-shadow: 0 0 2.5px #00000022; background-color: rgba(255,255,255,0.65) !important; }
@@ -1709,6 +1723,8 @@
 
    
   </main>
+
+  <footer class="page-footer">© Amrou Almfalani 2025</footer>
 
   <script>
     (function(){ var b=document.getElementById('themeToggle'); if(!b) return; b.addEventListener('click', function(){ document.documentElement.classList.toggle('light'); document.body.classList.toggle('light'); try{ localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark'); }catch(e){} }); })();
