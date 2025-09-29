@@ -483,45 +483,262 @@
     }
 
     #resume.glass-card {
-  margin-bottom: 16px;   /* smaller gap below Resume */
-}
-#about.glass-card {
-  margin-top: 16px;      /* smaller gap above About Me */
-  /* margin-right: 30px; */
-}
+      margin-bottom: clamp(32px, 8vw, 64px);
+    }
+
+    #about.glass-card {
+      margin-top: clamp(32px, 8vw, 64px);
+    }
   </style>
 
   <style>
     /* Glass cards and section layout */
     section { scroll-margin-top: 120px; }
-.glass-card {
-  padding: 24px;
-  border-radius: 24px;
-  backdrop-filter: blur(7px);
-  background-color: rgba(255,255,255,0.09);
-  border: 1px solid rgba(255,255,255,0.12);
-  box-shadow: 0 0 2.5px #ffffff22;
-  margin: 64px auto;         /* center the box */
-  max-width: 800px;          /* keep same width as About/Projects */
-}    .section-title { font-size: 26px; font-weight: 700; margin: 0 0 12px 0; text-shadow: 0 0 10px rgba(255,255,255,0.25); }
-    .content-wrapper { width: 100%; max-width: 980px; margin: 0 auto; padding: 24px 16px 80px; position: relative; z-index: 0; }
-    .projects-grid, .skills-grid, .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    @media (max-width: 980px) { .projects-grid, .skills-grid, .blog-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 640px) { .projects-grid, .skills-grid, .blog-grid { grid-template-columns: 1fr; } .content-wrapper { margin-top: 12px; padding: 16px 16px 80px; } section { scroll-margin-top: 96px; } }
-    .project-card, .skill-card, .post-card { padding: 16px; border-radius: 16px; backdrop-filter: blur(6px); background-color: rgba(255,255,255,0.07); border: 1px solid rgba(255, 255, 255, 0.12); transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease; }
-    .project-card:hover, .skill-card:hover, .post-card:hover { transform: translateY(-2px); box-shadow: 0 0 12px rgba(255,255,255,0.18); background-color: rgba(255,255,255,0.10); }
-    .project-card img, .post-card img { width: 100%; height: 160px; -o-object-fit: cover; object-fit: cover; border-radius: 12px; margin-bottom: 10px; }
-    .skill-icons { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
-    .skill-item { text-align: center; padding: 12px; border-radius: 12px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); transition: transform .15s ease; display:flex; align-items:center; justify-content:center; gap:8px; }
-    .skill-item:hover { transform: scale(1.04); }
-    .links-row a { color: #fff; text-decoration: none; border: 1px solid rgba(255,255,255,0.25); padding: 6px 10px; border-radius: 10px; margin-right: 8px; display: inline-block; transition: transform .15s ease, background-color .2s ease, border-color .2s ease; }
-    .links-row a:hover { transform: translateY(-1px); background-color: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.4); }
-    .top-nav { position: fixed; top: 0px; left: 0; right: 0; width: 100%; max-width: 980px; margin: 0 auto; padding: 8px 16px; z-index: 2; display: flex; align-items: center; justify-content: space-between; }
-    .top-nav .nav-card { display: inline-flex; gap: 8px; align-items: center; }
-    .nav-link { color: #fff; text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 12px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); }
-    .nav-link:hover { background: rgba(255,255,255,0.10); }
-    .theme-toggle { margin-right: 120px; pointer; padding: 8px 12px; border-radius: 12px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: #fff; }
-    .theme-toggle:hover { background: rgba(255,255,255,0.10); }
+
+    .glass-card {
+      padding: 24px;
+      border-radius: 24px;
+      backdrop-filter: blur(7px);
+      background-color: rgba(255, 255, 255, 0.09);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 0 2.5px #ffffff22;
+      margin: 64px auto;
+      max-width: 800px;
+    }
+
+    @media (max-width: 768px) {
+      .glass-card {
+        margin: 40px auto;
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .glass-card {
+        margin: 28px auto;
+        padding: 18px;
+      }
+    }
+
+    .section-title {
+      font-size: 26px;
+      font-weight: 700;
+      margin: 0 0 12px 0;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+    }
+
+    .content-wrapper {
+      width: 100%;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 24px 16px 80px;
+      position: relative;
+      z-index: 0;
+    }
+
+    .projects-grid,
+    .skills-grid,
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    @media (max-width: 980px) {
+      .projects-grid,
+      .skills-grid,
+      .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .projects-grid,
+      .skills-grid,
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .content-wrapper {
+        margin-top: 12px;
+        padding: 16px 16px 80px;
+      }
+
+      section {
+        scroll-margin-top: 96px;
+      }
+    }
+
+    .project-card,
+    .skill-card,
+    .post-card {
+      padding: 16px;
+      border-radius: 16px;
+      backdrop-filter: blur(6px);
+      background-color: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+    }
+
+    .project-card:hover,
+    .skill-card:hover,
+    .post-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.18);
+      background-color: rgba(255, 255, 255, 0.10);
+    }
+
+    .project-card img,
+    .post-card img {
+      width: 100%;
+      height: 160px;
+      -o-object-fit: cover;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    .skill-icons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+    }
+
+    @media (max-width: 480px) {
+      .skill-icons {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      }
+    }
+
+    .skill-item {
+      text-align: center;
+      padding: 6px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: transform .15s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: nowrap;
+      font-size: clamp(12px, 2vw, 16px);
+    }
+
+    .skill-item i {
+      font-size: 22px;
+    }
+
+    .skill-item:hover {
+      transform: scale(1.04);
+    }
+
+    .links-row a {
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 6px 10px;
+      border-radius: 10px;
+      margin-right: 8px;
+      display: inline-block;
+      transition: transform .15s ease, background-color .2s ease, border-color .2s ease;
+    }
+
+    .links-row a:hover {
+      transform: translateY(-1px);
+      background-color: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .top-nav {
+      position: fixed;
+      top: 0px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 8px 0;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .top-nav .nav-card {
+      display: flex;
+      gap: 9px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: min(92vw, 800px);
+      margin: 0 auto;
+    }
+
+    @media (min-width: 680px) {
+      .top-nav {
+        padding: 8px 16px;
+        justify-content: space-between;
+      }
+
+      .top-nav .nav-card {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        width: auto;
+      }
+    }
+
+    .nav-link {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.10);
+    }
+
+    .theme-toggle {
+      cursor: pointer;
+      padding: 8px 12px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #fff;
+    }
+
+    @media (min-width: 680px) {
+      .theme-toggle {
+        margin-left: auto;
+      }
+    }
+
+    .theme-toggle:hover {
+      background: rgba(255, 255, 255, 0.10);
+    }
+
+    @media (max-width: 520px) {
+      .top-nav .nav-card {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 8px;
+      }
+
+      .top-nav .nav-card::-webkit-scrollbar {
+        display: none;
+      }
+
+      .nav-link,
+      .theme-toggle {
+        flex: 0 0 auto;
+      }
+    }
     /* Light theme */
     body.light { background-color: #f6f7fb; color: #111; }
     body.light .border { box-shadow: 0 0 2.5px #00000022; background-color: rgba(255,255,255,0.65) !important; }
@@ -1413,22 +1630,20 @@
       <a class="nav-link" href="#about">About</a>
       <a class="nav-link" href="#projects">Projects</a>
       <a class="nav-link" href="#skills">Skills</a>
-      <!-- <a class="nav-link" href="#contact">Contact</a> -->
+      <button id="themeToggle" class="theme-toggle">🌗</button>
     </div>
-    <button id="themeToggle" class="theme-toggle">🌗</button>
   </div>
-
-<section id="resume" class="glass-card">
-  <h2 class="section-title">Resume</h2>
-  <p style="margin:0 0 12px 0;">Download a PDF version of my CV.</p>
-  <div class="links-row">
-    <a href="media/Amrou CV.pdf" download>Download CV</a>
-  </div>
-</section>
-
 
   <!-- Content sections -->
   <main class="content-wrapper" style="z-index:1;">
+    <section id="resume" class="glass-card">
+      <h2 class="section-title">Resume</h2>
+      <p style="margin:0 0 12px 0;">Download my CV as PDF.</p>
+      <div class="links-row">
+        <a href="media/Amrou CV.pdf" download>Download CV</a>
+      </div>
+    </section>
+
     <section id="about" class="glass-card">
       <h2 class="section-title">About Me</h2>
       <p style="margin:0; font-size:16px; line-height:1.6;">II’m a second-year Software Engineering student at Jönköping University, passionate about creating fast, seamless experiences for both mobile and web. My interests span AI, automation, and developer tools, with a strong focus on building apps, bots, and high-quality user experiences.</p>
@@ -1442,7 +1657,7 @@
           <h3 style="margin:6px 0 8px 0;">ArbetsTid — iOS Time Tracker</h3>
           <p style="margin:0 0 10px 0; opacity:.9;">Track shifts, export reports, and insights for hourly work.</p>
           <div class="links-row">
-            <a href="https://github.com/AfterMath9/ArbetsTid" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
            
           </div>
         </div>
@@ -1451,7 +1666,7 @@
           <h3 style="margin:6px 0 8px 0;">DoTask</h3>
           <p style="margin:0 0 10px 0; opacity:.9;">React/TypeScript task app with Supabase backend for team collaboration, task organization, and analytics.</p>
           <div class="links-row">
-            <a href="https://github.com/AfterMath9/DoTask" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="hhttps://github.com/AfterMath9/DoTask" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="https://do-task-green.vercel.app/" target="_blank" rel="noopener noreferrer">Website</a>
           </div>
         </div>
@@ -1493,6 +1708,8 @@
     </section> -->
 
    
+  </main>
+
   <script>
     (function(){ var b=document.getElementById('themeToggle'); if(!b) return; b.addEventListener('click', function(){ document.documentElement.classList.toggle('light'); document.body.classList.toggle('light'); try{ localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark'); }catch(e){} }); })();
   </script>
