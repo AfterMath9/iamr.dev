@@ -6,15 +6,8 @@
 
 <p align="center">
   <b>Modern portfolio<a href="https://github.com/AfterMath9"></a></b><br>
-  <sub>Built with ❤️ using HTML, CSS & JavaScript</sub>
 </p>
 
-<p align="center">
-  <a href="https://github.com/AfterMath9/iamr.dev/stargazers"><img src="https://img.shields.io/github/stars/AfterMath9/iamr.dev?style=flat-square&color=ffcc00" alt="Stars"></a>
-  <a href="https://github.com/AfterMath9/iamr.dev/network/members"><img src="https://img.shields.io/github/forks/AfterMath9/iamr.dev?style=flat-square&color=00bfff" alt="Forks"></a>
-  <a href="https://github.com/AfterMath9/iamr.dev/issues"><img src="https://img.shields.io/github/issues/AfterMath9/iamr.dev?style=flat-square&color=ff6347" alt="Issues"></a>
-  <a href="https://github.com/AfterMath9/iamr.dev/blob/main/LICENSE"><img src="https://img.shields.io/github/license/AfterMath9/iamr.dev?style=flat-square&color=32cd32" alt="License"></a>
-</p>
 
 ---
 
